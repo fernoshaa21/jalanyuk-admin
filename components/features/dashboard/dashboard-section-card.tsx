@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 type DashboardSectionCardProps = {
-  title: string;
+  title?: string;
   children: React.ReactNode;
   className?: string;
 };
@@ -18,11 +18,13 @@ export function DashboardSectionCard({
         className,
       )}
     >
-      <div className="border-b border-slate-200/80 px-7 py-6">
-        <h2 className="text-2xl font-semibold tracking-tight text-slate-800">
-          {title}
-        </h2>
-      </div>
+      {title ? (
+        <div className="border-b border-slate-200/80 px-7 py-6">
+          <h2 className="text-2xl font-semibold tracking-tight text-slate-800">
+            {title}
+          </h2>
+        </div>
+      ) : null}
       <div className="p-5 sm:p-7">{children}</div>
     </section>
   );

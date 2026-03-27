@@ -1,5 +1,5 @@
-import { ActivitiesContent } from "@/components/features/activities/activities-content";
+import { AdminActivitiesView } from "@/components/features/activities/admin-activities-view";
 
 export default function AdminActivitiesPage() {
-  return <ActivitiesContent role="admin" />;
+  return <AdminActivitiesView />;
 }
